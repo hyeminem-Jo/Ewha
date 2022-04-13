@@ -8,5 +8,7 @@
 
 @import './mixins/responsive';
 @import './mixins/flexbox';
+@import './mixins/truncate';
+@import './mixins/lineclamp';
 
 @import './layouts/grids';
