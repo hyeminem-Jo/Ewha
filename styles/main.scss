@@ -1,6 +1,7 @@
 @import './constants/colors';
 @import './constants/grids';
 @import './constants/breakpoints';
+@import './constants/dimensions';
 
 @import './base/normalize';
 @import './base/reset';
@@ -13,3 +14,4 @@
 @import './mixins/position';
 
 @import './layouts/grids';
+@import './layouts/global-header';
