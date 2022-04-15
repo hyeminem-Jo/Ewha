@@ -1,0 +1,87 @@
+.middle-header {
+  
+  .mobile-header {
+    @include flexbox(between);
+    height: 77px;
+
+    .btn-search {
+      width: 37px;
+      height: 37px;
+      border: 1px solid $border;
+      background: url(/assets/images/icons/ic-search.png) no-repeat center;
+    }
+
+    .btn-menu {
+      width: 35px;
+      height: 35px;
+      border: 1px solid $border;
+      background: url(/assets/images/icons/ic-menu.png) no-repeat center;
+      background-size: 19px;
+    }
+
+    .logo {
+      a {
+        display: block;
+        width: 140px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .desktop-header {
+    @include flexbox(between);
+    position: relative;
+    height: 113px;
+
+    .input-group {
+      @include flexbox;
+
+      input {
+        border: 1px solid $border;
+        min-width: 284px;
+        padding: 10px 20px;
+
+        &::placeholder {
+          font-size: 13px;
+          font-weight: 300;
+        }
+      }
+
+      .btn-search {
+        width: 43px;
+        height: 43px;
+        border: 1px solid $border;
+        background: url(/assets/images/icons/ic-search.png) no-repeat center;
+      }
+    }
+
+    .logo {
+      @include pos-center;
+    }
+
+    .util-box {
+      @include flexbox;
+
+      &-item a {
+        padding: 10px 25px 10px 0;
+      }
+
+      .login {
+        margin-right: 24px;
+
+        .btn-login {
+          background: url('/assets/images/icons/ic-login.png') no-repeat center right;
+        }
+      }
+
+      .btn-lang {
+        background: url('/assets/images/icons/ic-lang.png') no-repeat center right;
+      }
+    }
+  }
+}
