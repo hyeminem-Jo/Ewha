@@ -16,7 +16,7 @@
         font-weight: 500;
 
         &:hover::after {
-          content:'';
+          content: '';
           position: absolute;
           top: 18px;
           right: 15px;
@@ -27,7 +27,7 @@
         }
       }
 
-      &:nth-child(2) .sub-menu-list, 
+      &:nth-child(2) .sub-menu-list,
       &:nth-child(4) .sub-menu-list {
         .title a {
           padding: 0;
@@ -61,6 +61,7 @@
           opacity: 0;
           transform: translate3d(0, -20px, 0);
         }
+
         100% {
           opacity: 1;
           transform: translate3d(0, 0, 0);
@@ -69,7 +70,6 @@
 
       &-list {
         flex-grow: 1;
-        // height: 420px;
         width: 100%;
         padding: 20px;
         border-right: 1px solid rgba(255, 255, 255, 0.3);
@@ -82,7 +82,6 @@
       &-item {
         color: $white;
 
-        // border: 1px solid white;
         a {
           display: block;
           opacity: 0.5;
@@ -104,8 +103,6 @@
           }
         }
       }
-
     }
   }
-
 }
