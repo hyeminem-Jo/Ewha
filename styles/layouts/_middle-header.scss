@@ -1,15 +1,8 @@
 .middle-header {
   
-  .mobile-header {
+  &-sm{
     @include flexbox(between);
-    height: 77px;
-
-    .btn-search {
-      width: 37px;
-      height: 37px;
-      border: 1px solid $border;
-      background: url(/assets/images/icons/ic-search.png) no-repeat center;
-    }
+    height: $middle-header-sm-height;
 
     .btn-menu {
       width: 35px;
@@ -33,30 +26,15 @@
     }
   }
 
-  .desktop-header {
+  &-lg {
     @include flexbox(between);
     position: relative;
-    height: 113px;
+    height: $middle-header-lg-height;
 
     .input-group {
-      @include flexbox;
 
       input {
-        border: 1px solid $border;
         min-width: 284px;
-        padding: 10px 20px;
-
-        &::placeholder {
-          font-size: 13px;
-          font-weight: 300;
-        }
-      }
-
-      .btn-search {
-        width: 43px;
-        height: 43px;
-        border: 1px solid $border;
-        background: url(/assets/images/icons/ic-search.png) no-repeat center;
       }
     }
 

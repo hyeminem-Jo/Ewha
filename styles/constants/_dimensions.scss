@@ -1,3 +1,6 @@
-$top-header-height: 43px;
-$middle-header-height: 40px;
-$bottom-header-height: 40px;
+$top-header-sm-height: 10px;
+$top-header-lg-height: 43px;
+$middle-header-sm-height: 77px;
+$middle-header-lg-height: 113px;
+$header-sm-height: $top-header-sm-height + $middle-header-sm-height + 2px;
+$bottom-header-height: 93px;
