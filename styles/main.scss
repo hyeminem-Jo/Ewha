@@ -13,6 +13,11 @@
 @import './mixins/lineclamp';
 @import './mixins/position';
 
+@import './modules/search-button';
+@import './modules/search-input';
+
+@import './components/search-wrap';
+
 @import './layouts/grids';
 @import './layouts/global-header';
 @import './layouts/top-header';
