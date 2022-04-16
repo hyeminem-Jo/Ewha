@@ -1,0 +1,111 @@
+.bottom-header {
+  position: relative;
+  border-top: 1px solid $border;
+
+  .gnb {
+    &-list {
+      @include flexbox;
+    }
+
+    &-item {
+
+      button {
+        position: relative;
+        padding: 36px 30px;
+        font-size: 18px;
+        font-weight: 500;
+
+        &:hover::after {
+          content:'';
+          position: absolute;
+          top: 18px;
+          right: 15px;
+          width: 20px;
+          height: 20px;
+          background: url('/assets/images/icons/ic-hover.png') no-repeat center;
+          background-size: contain;
+        }
+      }
+
+      &:nth-child(2) .sub-menu-list, 
+      &:nth-child(4) .sub-menu-list {
+        .title a {
+          padding: 0;
+          font-size: 18px;
+        }
+      }
+
+      &:hover .sub-menu {
+        display: block;
+      }
+    }
+
+    .sub-menu {
+      position: absolute;
+      top: calc(100% + 1px);
+      left: 0;
+      width: 100%;
+      background: url('/assets/images/img-logo-image-background.png') no-repeat top -30px right 7%;
+      background-size: 19%;
+      background-color: darken($point, 2%);
+      display: none;
+
+      &-wrap {
+        @include flexbox(center, stretch);
+        padding: 45px 0;
+        animation: sub-menu-fadein 0.6s ease-out;
+      }
+
+      @keyframes sub-menu-fadein {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, -20px, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      &-list {
+        flex-grow: 1;
+        // height: 420px;
+        width: 100%;
+        padding: 20px;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+        &:first-child {
+          border-left: 1px solid rgba(255, 255, 255, 0.3);
+        }
+      }
+
+      &-item {
+        color: $white;
+
+        // border: 1px solid white;
+        a {
+          display: block;
+          opacity: 0.5;
+          font-size: 15px;
+          padding: 10px 0;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &.title {
+          margin-bottom: 5px;
+
+          a {
+            padding-top: 0;
+            font-weight: 700;
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+  }
+
+}
