@@ -24,8 +24,8 @@ function openDrawerMenuItem() {
     this.classList.toggle('is-open')
     if (currentOpenedItem !== null) {
       currentOpenedItem.classList.remove('is-open')
-      currentOpenedItem = this
     }
+    currentOpenedItem = this
   } else {
     this.classList.remove('is-open')
     currentOpenedItem = null
