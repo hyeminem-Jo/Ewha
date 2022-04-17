@@ -33,6 +33,23 @@
         background-size: 40px;
       }
     }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      .menu-item>a {
+        background: none;
+      }
+    }
+
+    &:last-child {
+      .menu-list .menu-item {
+        &:nth-child(1)>a,
+        &:nth-child(2)>a,
+        &:nth-child(6)>a {
+          background: none;
+        }
+      }
+    }
   }
 
   .menu {
@@ -54,11 +71,15 @@
         font-size: 16px;
         font-weight: 500;
         border-bottom: 1px solid #d0d0d0;
+        background: url('/assets/images/icons/ic-menu-item-open.png') no-repeat center right 20px;
+        background-size: 14px;
       }
 
       &.is-open {
-        & > a {
+        &>a {
           font-weight: 700;
+          background: url('/assets/images/icons/ic-menu-item-close.png') no-repeat center right 20px;
+          background-size: 14px;
         }
 
         .submenu {
@@ -85,6 +106,10 @@
           padding: 10px 45px 10px 30px;
           font-size: 14px;
           font-weight: 300;
+
+          &:active {
+            font-weight: 400;
+          }
         }
       }
     }
