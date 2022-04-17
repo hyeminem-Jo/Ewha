@@ -4,14 +4,6 @@
     @include flexbox(between);
     height: $middle-header-sm-height;
 
-    .btn-menu {
-      width: 35px;
-      height: 35px;
-      border: 1px solid $border;
-      background: url(/assets/images/icons/ic-menu.png) no-repeat center;
-      background-size: 19px;
-    }
-
     .logo {
       a {
         display: block;
@@ -47,6 +39,11 @@
 
       &-item a {
         padding: 10px 25px 10px 0;
+
+        &:hover,
+        &:active {
+          opacity: 0.6;
+        }
       }
 
       .login {

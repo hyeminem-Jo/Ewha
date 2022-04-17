@@ -1,0 +1,38 @@
+%btn {
+  border: 1px solid $border;
+  background: url('/assets/images/icons/ic-search.png') no-repeat center;
+}
+
+.btn-search-37 {
+  @extend %btn;
+  width: 37px;
+  height: 37px;
+}
+
+.btn-search-43 {
+  @extend %btn;
+  width: 43px;
+  height: 43px;
+}
+
+.btn-search-50 {
+  @extend %btn;
+  width: 50px;
+  height: 35px;
+}
+
+.btn-menu-37 {
+  @extend %btn;
+  width: 37px;
+  height: 37px;
+  background: url('/assets/images/icons/ic-menu.png') no-repeat center;
+  background-size: 19px;
+}
+
+.btn-close-37 {
+  @extend %btn;
+  width: 37px;
+  height: 37px;
+  background: url('/assets/images/icons/ic-close.png') no-repeat center;
+  background-size: 19px;
+}
