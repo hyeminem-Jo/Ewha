@@ -1,0 +1,92 @@
+.sidebar-nav {
+  position: relative;
+
+  .nav-list {
+    width: 30%;
+    min-height: calc(100vh - $header-sm-height);
+    background-color: $point;
+  }
+
+  .nav-item {
+    height: 75px;
+    text-align: center;
+
+    &.is-active {
+      background-color: darken($point, 3%);
+
+      .menu {
+        display: block;
+      }
+    }
+
+    &>a {
+      display: block;
+      height: 100%;
+      color: $white;
+      line-height: 7.5;
+      font-size: 15px;
+    }
+
+    @for $i from 1 through 7 {
+      &:nth-child(#{$i})>a {
+        background: url('/assets/images/icons/ic-nav-0#{$i}.png') no-repeat top 10px center;
+        background-size: 40px;
+      }
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    display: none;
+    height: calc(100vh - $header-sm-height);
+    overflow-y: auto;
+    background-color: #ebebeb;
+
+    &-item {
+      &>a {
+        display: block;
+        text-align: left;
+        padding: 17px 35px 17px 30px;
+        color: $text-dark;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 1px solid #d0d0d0;
+      }
+
+      &.is-open {
+        & > a {
+          font-weight: 700;
+        }
+
+        .submenu {
+          max-height: 500px;
+        }
+      }
+    }
+
+    .submenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease-in-out;
+
+      &-list {
+        padding: 10px 0;
+        background-color: #dae2df;
+      }
+
+      &-item {
+        text-align: left;
+
+        a {
+          display: block;
+          padding: 10px 45px 10px 30px;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
