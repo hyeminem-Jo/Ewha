@@ -8,6 +8,7 @@
   background-color: $white;
   animation: sidebar-ani .3s ease-in-out;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.446);
+  z-index: $sidebar-level;
 
   &.is-active {
     display: block;

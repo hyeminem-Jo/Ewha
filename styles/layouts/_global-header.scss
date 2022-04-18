@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   border-bottom: 2px solid $point;
+  z-index: $header-level;
 
   .top-header {
     
