@@ -11,11 +11,12 @@
 
   &.is-active {
     display: block;
+    transform: translate3d(0, 0, 0);
   }
 
   @keyframes sidebar-ani {
     0% {
-      transform: translate3d(15%, 0, 0);
+      transform: translate3d(20%, 0, 0);
     }
     100% {
       transform: translate3d(0, 0, 0);

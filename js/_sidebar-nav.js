@@ -15,7 +15,6 @@ $$sidebarNavItem.forEach((item) => {
   item.addEventListener('click', activeNavItem)
 });
 
-// const $$drawerMenuItem = $sidebarNav.querySelectorAll('.menu .menu-item');
 const $$drawerMenuBtn = $sidebarNav.querySelectorAll('.menu .menu-item > a');
 let currentOpenedItem = document.querySelector('.menu .menu-item.is-open');
 
