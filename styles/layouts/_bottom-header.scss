@@ -105,4 +105,63 @@
       }
     }
   }
+
+  .logo,
+  .util-box {
+    display: none;
+  }
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+
+    .bottom-header-wrap {
+      @include flexbox(between);
+      padding: 0 30px;
+      border-bottom: 1px solid $border;
+    }
+
+    .logo,
+    .util-box {
+      display: block;
+    }
+
+    .logo {
+      width: 160px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .util-box {
+      @include flexbox;
+
+      &-item a {
+        padding: 10px 25px 10px 0;
+
+        &:hover,
+        &:active {
+          opacity: 0.6;
+        }
+      }
+
+      .login {
+        margin-right: 24px;
+
+        .btn-login {
+          background: url('/assets/images/icons/ic-login.png') no-repeat center right;
+        }
+      }
+    }
+
+    .sub-menu {
+      top: 100%;
+    }
+  }
 }

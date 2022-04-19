@@ -1,4 +1,6 @@
 .main-visual {
+  padding-top: $header-sm-height;
+
   .main-visual-slider {
     position: relative;
   }
@@ -80,6 +82,8 @@
   }
 
   @include responsive(D) {
+    padding-top: 0;
+    
     .tns-nav {
       bottom: 40px;
     }

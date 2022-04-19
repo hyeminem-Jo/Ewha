@@ -1,14 +1,13 @@
 .global-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  background-color: $white;
   border-bottom: 2px solid $point;
   z-index: $header-level;
 
-  .top-header {
-    
-  }
-
-  .middle-header {
-    
+  @include responsive(D) {
+    position: relative;
   }
 }
