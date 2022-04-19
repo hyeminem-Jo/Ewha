@@ -1,0 +1,91 @@
+.main-visual {
+  .main-visual-slider {
+    position: relative;
+  }
+
+  .slider-item {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .tns-outer>button {
+    position: absolute;
+    left: calc(50% + 40px);
+    bottom: 20px;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%);
+    z-index: $tab-button-level;
+    font-size: 0;
+    background: url('/assets/images/icons/ic-pause.png') no-repeat center;
+    background-size: 7px;
+
+    &.is-start {
+      background: url('/assets/images/icons/ic-play.png') no-repeat center;
+      background-size: 7px;
+    }
+  }
+
+  .tns-nav {
+    @include pos-center-x;
+    bottom: 20px;
+    z-index: $tab-nav-level;
+
+    button {
+      transform: translate3d(0, -2px, 0);
+      border: 1.5px solid $white;
+      width: 10px;
+      height: 10px;
+      margin: 0 3px;
+      border-radius: 50%;
+
+      &.tns-nav-active {
+        background-color: #fff;
+        width: 20px;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .tns-outer>button {
+      background-size: 10px;
+      left: calc(50% + 50px);
+
+      &.is-start {
+        background: url('/assets/images/icons/ic-play.png') no-repeat center;
+        background-size: 10px;
+      }
+    }
+
+    .tns-nav {
+      button {
+        transform: translate3d(0, -2px, 0);
+        border: 1.5px solid $white;
+        width: 13px;
+        height: 13px;
+        margin: 0 4px;
+        border-radius: 50%;
+  
+        &.tns-nav-active {
+          background-color: #fff;
+          width: 24px;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .tns-nav {
+      bottom: 40px;
+    }
+
+    .tns-outer>button {
+      bottom: 40px;
+    }
+  }
+}
