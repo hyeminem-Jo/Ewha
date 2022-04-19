@@ -36,3 +36,22 @@
   background: url('/assets/images/icons/ic-close.png') no-repeat center;
   background-size: 19px;
 }
+
+.btn-more {
+  position: relative;
+  padding: 0 25px 5px 0;
+  font-size: 14px;
+  font-weight: 300;
+  border-bottom: 1px solid $text-primary;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 20px;
+    height: 1px;
+    transform: translate(3px ,-6px) rotate(45deg);
+    background-color: $text-primary;
+  }
+}
