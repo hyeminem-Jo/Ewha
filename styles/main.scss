@@ -11,14 +11,15 @@
 @import './mixins/responsive';
 @import './mixins/flexbox';
 @import './mixins/truncate';
-@import './mixins/lineclamp';
 @import './mixins/position';
+@import './mixins/line-clamp';
 
 @import './modules/buttons';
 @import './modules/search-input';
 
 @import './components/search-wrap';
 @import './components/visual-carousel';
+@import './components/main-news01';
 
 @import './layouts/grids';
 @import './layouts/global-header';
