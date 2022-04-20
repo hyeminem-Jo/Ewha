@@ -1,7 +1,7 @@
 // main-visual slider 구현
 const visualCarousel = tns({
   container: '.main-visual .slider-list',
-  controlsContainer: '.main-visual .slider-controls',
+  controls: false,
   arrowKeys: true,
   autoplay: true,
   autoplayHoverPause: true,
