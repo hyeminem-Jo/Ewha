@@ -1,26 +1,36 @@
 .main-news01 {
-  padding: 40px 0 10px;
+  padding: 40px 0 40px;
 
   .news01-header {
     @include flexbox(between);
 
     .main-title {
-      padding-left: 8px;
+      padding-top: 2px;
+      padding-left: 10px;
+      margin-bottom: 5px;
       font-size: 15px;
-      line-height: 23px;
+      font-weight: 400;
       border-left: 2px solid $red;
     }
 
     .main-sub-title {
-      padding: 3px 0 25px;
+      padding: 5px 0 25px;
       font-size: 25px;
-      // line-height: ;
     }
   }
 
   .news01-box01 {
     .box {
       padding-bottom: 20px;
+      transition: opacity .2s ease-in-out;
+
+      &:hover {
+
+        .title,
+        img {
+          opacity: 0.7;
+        }
+      }
 
       a {
         display: block;
@@ -28,6 +38,10 @@
 
       &-img {
         padding-bottom: 20px;
+
+        img {
+          transition: opacity .2s ease-in-out;
+        }
       }
 
       &-text {
@@ -35,8 +49,10 @@
           position: relative;
           display: block;
           font-size: 18px;
+          font-weight: 500;
           line-height: 26px;
           margin-bottom: 25px;
+          transition: opacity .2s ease-in-out;
 
           &::after {
             content: '';
@@ -61,7 +77,6 @@
   }
 
   .news01-box02 {
-    // border: 1px solid red;
     overflow: hidden;
 
     .box-wrap {
@@ -73,21 +88,31 @@
       width: 48%;
       overflow: hidden;
 
+      &:hover {
+
+        .title,
+        img {
+          opacity: 0.7;
+        }
+      }
+
       .mini-box-img {
         margin-bottom: 14px;
+
+        img {
+          transition: opacity .1s ease-in-out;
+        }
       }
 
       .title {
         display: block;
         height: 42px;
         font-size: 16px;
+        font-weight: 500;
         line-height: 21px;
+        transition: opacity .1s ease-in-out;
       }
     }
-
-    // .mini-box:nth-child(2n - 1) {
-    //   float: right;
-    // }
   }
 
   img {
@@ -97,11 +122,37 @@
   }
 
   @include responsive(T) {
+    .news01-header {
+      .main-sub-title {
+        font-size: 35px;
+      }
+    }
+
     .news01-box01 {
       @include flexbox(between);
 
       .box {
         width: calc(50% - 10px);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    padding: 100px 0 120px;
+
+    .news01-header {
+      .main-title {
+        padding-top: 5px;
+        padding-left: 10px;
+        margin-bottom: 5px;
+        font-size: 17px;
+        font-weight: 400;
+        border-left: 2px solid $red;
+      }
+
+      .main-sub-title {
+        padding: 13px 0 52px;
+        font-size: 45px;
       }
     }
   }
