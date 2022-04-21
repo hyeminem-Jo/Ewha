@@ -1,0 +1,164 @@
+.main-notice.notice01 {
+  padding: 30px 0 120px;
+  background-color: #222d29;
+  color: $white;
+
+  .notice-title {
+    padding-top: 2px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    border-left: 2px solid $red;
+  }
+
+  .notice-header {
+    @include flexbox(center, stretch);
+
+    .slogan {
+      flex: 1;
+      padding: 10px 0 20px;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    .desc {
+      flex: 2;
+      padding-top: 35px;
+      opacity: 0.5;
+      line-height: 25px;
+    }
+  }
+
+  .main-notice-content {
+    .heading {
+      @include flexbox(between);
+      padding: 0 10px 10px;
+
+      // background-color: rgba(255, 255, 255, 0.529);
+      .title {
+        font-size: 18px;
+        line-height: 26px;
+        opacity: 0.3;
+      }
+
+      .btn-more {
+        border-color: $white;
+        font-weight: 400;
+
+        &::after {
+          background-color: $white;
+        }
+      }
+
+    }
+
+    .notice {
+      &-list {
+        &:first-child {
+
+          &:first-child {
+            border-top: 1px solid $text-light;
+          }
+
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) a {
+              padding-left: 40px;
+            }
+          }
+        }
+      }
+
+      &-item {
+        padding: 0 10px;
+        border-bottom: 1px solid $text-light;
+
+        a {
+          @include truncate;
+          position: relative;
+          display: block;
+          padding: 10px;
+
+          .ic-notice,
+          .ic-new {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+          }
+
+          .ic-notice {
+            @include pos-center-y;
+            left: 10px;
+            background: url('/assets/images/icons/ic-notice.png') no-repeat center;
+            background-color: $red;
+            background-size: 13px;
+          }
+
+          .ic-new {
+            @include inline-flexbox;
+            background-color: $green-light;
+            margin-right: 6px;
+            font-size: 14px;
+          }
+
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    padding: 90px 0 180px;
+
+    .notice-header {
+      padding-bottom: 50px;
+
+      .slogan {
+        padding-top: 15px;
+
+        img {
+          width: 300px;
+        }
+      }
+
+      .desc {
+        padding-top: 15px;
+      }
+    }
+
+    .main-notice-content {
+      .heading {
+        padding-bottom: 15px;
+        .title {
+          font-size: 25px;
+        }
+
+        .btn-more {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .notice {
+      @include flexbox(between);
+
+      &-list {
+        width: 48%;
+
+        &:last-child {
+
+          li:first-child {
+            border-top: 1px solid $text-light;
+          }
+        }
+      }
+
+      &-item {
+        @include flexbox(start);
+        height: 50px;
+      }
+    }
+  }
+}
