@@ -5,6 +5,7 @@
     margin-bottom: 100px;
     box-shadow: 2px 4px 10px rgb(0 0 0 / 30%);
     border-radius: 5px;
+    overflow: hidden;
 
     &-img {
       img {
@@ -145,8 +146,9 @@
         }
 
         .item-box {
-          padding: 40px;
-          height: 83%;
+          padding: 20px 40px 40px;
+          top: 65px;
+          height: 80%;
 
           .heading {
             padding-bottom: 70px;
@@ -171,6 +173,7 @@
           }
 
           .btn-more {
+            font-size: 16px;
             left: 40px;
           }
         }
