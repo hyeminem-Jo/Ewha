@@ -9,5 +9,9 @@
       font-size: 13px;
       font-weight: 300;
     }
+
+    &.is-focus {
+      border: 1px solid $text-primary;
+    }
   }
 }
