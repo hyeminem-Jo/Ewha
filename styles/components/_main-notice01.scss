@@ -3,14 +3,14 @@
   background-color: #222d29;
   color: $white;
 
-  .notice-title {
-    padding-top: 2px;
-    padding-left: 10px;
-    margin-bottom: 5px;
-    font-size: 15px;
-    font-weight: 500;
-    border-left: 2px solid $red;
-  }
+  // .notice-title {
+  //   padding-top: 2px;
+  //   padding-left: 10px;
+  //   margin-bottom: 5px;
+  //   font-size: 15px;
+  //   font-weight: 500;
+  //   border-left: 2px solid $red;
+  // }
 
   .notice-header {
     @include flexbox(center, stretch);
@@ -111,6 +111,10 @@
 
   @include responsive(D) {
     padding: 90px 0 180px;
+
+    // .notice-title {
+    //   font-size: 19px;
+    // }
 
     .notice-header {
       padding-bottom: 50px;

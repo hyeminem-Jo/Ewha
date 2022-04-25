@@ -4,15 +4,6 @@
   .news01-header {
     @include flexbox(between);
 
-    .main-title {
-      padding-top: 2px;
-      padding-left: 10px;
-      margin-bottom: 5px;
-      font-size: 15px;
-      font-weight: 400;
-      border-left: 2px solid $red;
-    }
-
     .main-sub-title {
       padding: 5px 0 25px;
       font-size: 25px;
@@ -141,14 +132,6 @@
     padding: 100px 0 120px;
 
     .news01-header {
-      .main-title {
-        padding-top: 5px;
-        padding-left: 10px;
-        margin-bottom: 5px;
-        font-size: 17px;
-        font-weight: 400;
-        border-left: 2px solid $red;
-      }
 
       .main-sub-title {
         padding: 13px 0 52px;

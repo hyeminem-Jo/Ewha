@@ -1,0 +1,14 @@
+.head-title {
+  padding-top: 2px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  border-left: 2px solid $red;
+
+  @include responsive(D) {
+    padding-top: 5px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+}
