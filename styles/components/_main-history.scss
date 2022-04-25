@@ -1,0 +1,149 @@
+.main-history {
+  padding: 25px 0;
+  background: url('/assets/images/img-main-history-bg.gif') no-repeat;
+  background-size: cover;
+
+  .history-carousel {
+    &-thumbnail {
+      .thumbnail-list {
+        @include flexbox(between, stretch);
+        flex-wrap: wrap;
+      }
+
+      .thumbnail-item {
+        width: calc(50% - 0.5px);
+        margin-bottom: 1px;
+        text-align: center;
+
+        @for $i from 1 through 4 {
+          &:nth-child(#{$i}) {
+            background: url('/assets/images/img-main-history-0#{$i}.gif') no-repeat center;
+            background-size: cover;
+          }
+        }
+
+        &.tns-nav-active {
+          button {
+            background-color: rgba($point, .8);
+          }
+        }
+
+        button {
+          width: 100%;
+          padding: 70px 0;
+          background-color: rgba(0, 0, 0, 0.443);
+          color: $white;
+          transition: background-color .3s ease-in-out;
+
+          .title {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+
+    &-slider {
+      position: relative;
+
+      .slider-list {
+        background: url('/assets/images/img-logo-image-background.png') no-repeat top 30px right -40px;
+        background-size: 80%;
+        background-color: darken($point, 1%);
+        color: $white;
+      }
+
+      .slider-item {
+        transition: .2s;
+        min-height: 420px;
+        padding: 40px;
+
+        .text-box {
+          .heading {
+            margin-bottom: 40px;
+
+            .year {
+              font-size: 65px;
+
+              &:nth-child(2) {
+                padding-left: 40px;
+              }
+            }
+
+            .title {
+              padding-left: 40px;
+              padding-right: 20px;
+              font-size: 22px;
+              line-height: 1.2;
+            }
+          }
+
+          .desc {
+            text-align: justify;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.5;
+          }
+        }
+      }
+
+      .slider-controls {
+        @include flexbox(between);
+        position: absolute;
+        top: 170px;
+        left: 0;
+        width: 100%;
+
+        .btn-control {
+          display: block;
+          width: 50px;
+          height: 50px;
+
+          &.is-prev {
+            background: url('/assets/images/icons/ic-arrow-prev.png') no-repeat center;
+          }
+
+          &.is-next {
+            background: url('/assets/images/icons/ic-arrow-next.png') no-repeat center;
+          }
+        }
+        
+      }
+    }
+
+    @include responsive(T) {
+      .slider-list {
+        background: url('/assets/images/img-logo-image-background.png') no-repeat top 70px right -100px;
+        background-size: 60%;
+        background-color: darken($point, 1%);
+      }
+    }
+
+    @include responsive(D) {
+      @include flexbox;
+
+      &-thumbnail {
+        width: 40%;
+        margin-right: 1px;
+
+        .thumbnail-list {
+          height: 100%;
+          min-height: 430px;
+        }
+
+        .thumbnail-item {
+          button {
+            height: 100%;
+          }
+        }
+      }
+
+      &-slider {
+        width: 60%;
+
+        .slider-list {
+          min-height: 430px;
+        }
+      }
+    }
+  }
+}
