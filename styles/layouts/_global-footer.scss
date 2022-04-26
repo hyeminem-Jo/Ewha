@@ -1,0 +1,107 @@
+.global-footer {
+  padding-bottom: 100px;
+  border: 1px solid #eee;
+
+  .footer-quick {
+    &-carousel {
+      .slider-list {
+        @include flexbox(between, stretch);
+        height: 50px;
+      }
+
+      .slider-item {
+        a {
+          @include flexbox;
+          height: 100%;
+          text-align: center;
+          font-size: 15px;
+          line-height: 18px;
+          font-weight: 500;
+          color: #999;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+        }
+      }
+    }
+
+    .tns-nav {
+      display: none;
+    }
+  }
+
+  @include responsive(T) {
+    .quick-service-wrap {
+      @include flexbox;
+
+      .head-title {
+        width: 170px;
+      }
+
+      .footer-quick {
+        width: calc(100% - 170px);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .quick-service-wrap {
+      @include flexbox(start, start);
+      position: relative;
+      padding-top: 15px;
+
+      .head-title {
+        width: 200px;
+        margin-right: 30px;
+      }
+
+      .footer-quick {
+        width: calc(100% - 300px);
+
+        &.is-active {
+          .slider-list {
+            height: 40px;
+          }
+
+          .btn-open {
+            border: 1px solid #eee;
+            border-top: none;
+            background: url('/assets/images/icons/ic-btn-quick-close.png') no-repeat center;
+            background-color: $white
+          }
+        }
+
+        &-carousel {
+          .slider-list {
+            @include flexbox(start, start);
+            flex-wrap: wrap;
+            height: auto;
+          }
+
+          .slider-item {
+            margin-right: 20px;
+            margin-bottom: 10px;
+
+            a {
+              padding: 5px 0;
+              font-size: 17px;
+              line-height: 25px;
+            }
+          }
+        }
+
+        .btn-open {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 75px;
+          height: 25px;
+          background: url('/assets/images/icons/ic-btn-quick-open.png') no-repeat center;
+          background-color: $text-dark;
+        }
+      }
+    }
+  }
+}
