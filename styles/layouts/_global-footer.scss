@@ -1,6 +1,4 @@
 .global-footer {
-  padding-bottom: 100px;
-  border: 1px solid #eee;
 
   .footer-quick {
     &-carousel {
@@ -32,6 +30,164 @@
     }
   }
 
+  .footer-wrap {
+    background-color: #222d29;
+    color: $white;
+
+    .top-footer-wrap {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .top-footer-box {
+      @include flexbox(between, start);
+
+      .list {
+        @include flexbox(start);
+        flex-wrap: wrap;
+        flex: 1;
+        padding: 10px 10px 10px 0;
+        // border: 1px solid;
+      }
+
+      .item {
+        width: 50%;
+        text-align: center;
+
+        a {
+          display: block;
+          padding: 5px 0;
+          font-size: 13px;
+          line-height: 18px;
+          letter-spacing: -0.5px;
+          color: #979499;
+        }
+
+        &:nth-child(3) {
+          a {
+            color: $white;
+          }
+        }
+      }
+
+      .btn-top {
+        margin-left: 30px;
+        padding: 27px 16px 11px;
+        font-size: 13px;
+        color: $white;
+        background: url('/assets/images/icons/ic-btn-quick-open.png') no-repeat top 12px center;
+        background-size: 12px;
+        background-color: $red;
+      }
+    }
+
+    .bottom-footer-box {
+      padding: 20px 0;
+
+      .box {
+        @include flexbox(between, start);
+
+        &:first-child {
+          padding-bottom: 20px;
+        }
+      }
+
+      .footer-logo {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        margin-top: 3px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .info {
+        flex: 1;
+
+        .info-list {
+          li {
+            font-size: 13px;
+            line-height: 22px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .copyright {
+        font-size: 13px;
+        line-height: 22px;
+        opacity: 0.3;
+      }
+
+      .box.related {
+        @include column-flexbox;
+        // border: 1px solid orange;
+
+        .related-site {
+          @include flexbox;
+          position: relative;
+          width: 100%;
+          border: 1px solid $white;
+
+          &.is-active {
+            .related-site-list {
+              display: block;
+            }
+          }
+
+          &:last-child {
+            margin-top: 10px;
+          }
+
+          &-box {
+            flex: 1;
+
+            .title {
+              display: block;
+              padding: 9px 30px 10px 20px;
+              font-size: 14px;
+              font-weight: 300;
+              background: url('/assets/images/icons/ic-btn-quick-close.png') no-repeat center right 10px;
+              background-size: 12px;
+            }
+
+            .related-site-list {
+              display: none;
+              position: absolute;
+              bottom: 100%;
+              left: -1px;
+              width: calc(100% + 2px);
+              padding: 10px 0;
+              background-color: $white;
+              color: $text-primary;
+            }
+
+            .related-site-item {
+              a {
+                display: block;
+                padding: 4px 20px;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 300;
+              }
+            }
+          }
+
+          .related-site-go {
+            padding: 10px 12px;
+            font-size: 15px;
+            background-color: $white;
+            color: $text-primary;
+          }
+        }
+      }
+    }
+  }
+
   @include responsive(T) {
     .quick-service-wrap {
       @include flexbox;
@@ -42,6 +198,38 @@
 
       .footer-quick {
         width: calc(100% - 170px);
+      }
+    }
+
+    .footer-wrap {
+      // padding-bottom: 40px;
+
+      .top-footer-wrap {
+        .top-footer-box {
+
+          .item {
+            width: 25%;
+
+            a {
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+
+      .bottom-footer-box {
+        .box.related {
+          flex-direction: row;
+
+          .related-site {
+            width: 205px;
+
+            &:last-child {
+              margin-top: 0;
+              margin-left: 20px;
+            }
+          }
+        }
       }
     }
   }
@@ -100,6 +288,35 @@
           height: 25px;
           background: url('/assets/images/icons/ic-btn-quick-open.png') no-repeat center;
           background-color: $text-dark;
+        }
+      }
+    }
+
+    .footer-wrap {
+      .top-footer-box {
+        @include flexbox(center, start);
+
+        .item {
+          width: auto;
+          flex: 1;
+
+          a {
+            font-size: 15px;
+            line-height: 23px;
+          }
+        }
+      }
+
+      .bottom-footer-box {
+        @include flexbox(between);
+
+        .info {
+          .info-list {
+            li {
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
         }
       }
     }
