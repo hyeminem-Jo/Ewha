@@ -1,5 +1,4 @@
 .global-footer {
-
   .footer-quick {
     &-carousel {
       .slider-list {
@@ -20,7 +19,6 @@
           &:last-child {
             margin-right: 0;
           }
-
         }
       }
     }
@@ -46,7 +44,6 @@
         flex-wrap: wrap;
         flex: 1;
         padding: 10px 10px 10px 0;
-        // border: 1px solid;
       }
 
       .item {
@@ -74,7 +71,8 @@
         padding: 27px 16px 11px;
         font-size: 13px;
         color: $white;
-        background: url('/assets/images/icons/ic-btn-quick-open.png') no-repeat top 12px center;
+        background: url('/assets/images/icons/ic-btn-quick-open.png') no-repeat
+          top 12px center;
         background-size: 12px;
         background-color: $red;
       }
@@ -125,7 +123,6 @@
 
       .box.related {
         @include column-flexbox;
-        // border: 1px solid orange;
 
         .related-site {
           @include flexbox;
@@ -151,7 +148,8 @@
               padding: 9px 30px 10px 20px;
               font-size: 14px;
               font-weight: 300;
-              background: url('/assets/images/icons/ic-btn-quick-close.png') no-repeat center right 10px;
+              background: url('/assets/images/icons/ic-btn-quick-close.png')
+                no-repeat center right 10px;
               background-size: 12px;
             }
 
@@ -202,11 +200,8 @@
     }
 
     .footer-wrap {
-      // padding-bottom: 40px;
-
       .top-footer-wrap {
         .top-footer-box {
-
           .item {
             width: 25%;
 
@@ -256,8 +251,9 @@
           .btn-open {
             border: 1px solid #eee;
             border-top: none;
-            background: url('/assets/images/icons/ic-btn-quick-close.png') no-repeat center;
-            background-color: $white
+            background: url('/assets/images/icons/ic-btn-quick-close.png')
+              no-repeat center;
+            background-color: $white;
           }
         }
 
@@ -286,7 +282,8 @@
           right: 0;
           width: 75px;
           height: 25px;
-          background: url('/assets/images/icons/ic-btn-quick-open.png') no-repeat center;
+          background: url('/assets/images/icons/ic-btn-quick-open.png')
+            no-repeat center;
           background-color: $text-dark;
         }
       }
