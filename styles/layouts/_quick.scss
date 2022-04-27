@@ -8,8 +8,8 @@ body {
   position: fixed;
   bottom: 30px;
   right: 0;
-  display: inline-block;
   padding-right: 20px;
+  display: inline-block;
   z-index: $quick-level;
 
   &-menu {
@@ -18,7 +18,7 @@ body {
     border-radius: 50%;
     opacity: 0;
     transform: translate3d(100px, 0, 0);
-    transition: .3s;
+    transition: 0.3s;
 
     &.is-active {
       opacity: 1;
@@ -29,10 +29,9 @@ body {
       background: url('/assets/images/icons/ic-quick-open.png') no-repeat center;
       background-size: 40px;
       background-color: $point;
-      transition: .3s;
+      transition: 0.3s;
 
       &.is-click {
-        // background: none;
         border: 1px solid $white;
         background: transparent url('/assets/images/icons/ic-quick-close.png') no-repeat center;
         background-size: 20px;
@@ -56,11 +55,7 @@ body {
     &-item {
       @for $i from 1 through 7 {
         &:nth-child(#{$i}) a {
-          background: url('/assets/images/icons/ic-quick-0#{$i}.png')
-            no-repeat
-            center
-            right
-            125px;
+          background: url('/assets/images/icons/ic-quick-0#{$i}.png') no-repeat center right 125px;
           background-size: 40px;
         }
       }
@@ -81,6 +76,13 @@ body {
       background: url('/assets/images/img-chatbot.png') no-repeat center;
       background-size: contain;
     }
+
+    // &:active,
+    &-btn:hover {
+      border: 1px solid $point;
+      background: url('/assets/images/img-chatbot-active.png') no-repeat center;
+      background-size: contain;
+    }
   }
 
   .quick-menu-btn,
@@ -90,6 +92,46 @@ body {
     height: 60px;
     border-radius: 50%;
     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.614);
+  }
+
+  @include responsive(T) {
+    bottom: 50px;
+    right: 0;
+    padding-right: 40px;
+
+    .quick-menu-list {
+      width: 400px;
+    }
+
+    .quick-menu-item {
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) a {
+          background: url('/assets/images/icons/ic-quick-0#{$i}.png') no-repeat center right 170px;
+          background-size: 50px;
+        }
+      }
+
+      a {
+        padding: 26px 0;
+        padding-right: 240px;
+        font-size: 18px;
+      }
+    }
+
+    .quick-menu-btn,
+    .quick-chatbot-btn {
+      display: block;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.614);
+    }
+
+    .quick-menu-btn {
+      background: url('/assets/images/icons/ic-quick-open.png') no-repeat center;
+      background-size: 60px;
+      background-color: $point;
+    }
   }
 }
 
@@ -103,7 +145,7 @@ body {
   background-color: rgba(0, 0, 0, 0.683);
   opacity: 0;
   visibility: hidden;
-  transition: .3s;
+  transition: 0.3s;
 
   &.is-active {
     opacity: 1;

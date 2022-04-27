@@ -29,4 +29,4 @@ function quickMenuApear() {
   }
 }
 
-window.addEventListener('scroll', _.throttle(quickMenuApear, 0))
+window.addEventListener('scroll', _.throttle(quickMenuApear, 100))
