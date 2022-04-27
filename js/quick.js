@@ -22,7 +22,6 @@ $btnQuick.addEventListener('click', openQuickMenu)
 
 function quickMenuApear() {
   if (window.scrollY > 0) {
-    console.log('0')
     $quickMenu.classList.add('is-active')
   } else {
     $quickMenu.classList.remove('is-active')
