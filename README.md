@@ -15,6 +15,8 @@
 ### 1. 스크롤에 따른 header 변화
 해당 사이트는 헤더 영역이 꽤 크고 복잡하게 구성이 되어있습니다. 이대로 fixed 를 주게 되면 다른 section content 를 볼 때 시각적으로 방해가 되기 때문에 스크롤을 하게 되면 일정 부분에서 헤더 영역이 심플한 모양으로 변화하도록 구현하였습니다. 
 
+![image](https://user-images.githubusercontent.com/83049523/169683737-0b3d6651-6faf-423d-8213-426bb19b1775.png)
+
 ```
 const $bottomHeader = document.querySelector('.bottom-header')
 
