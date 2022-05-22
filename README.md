@@ -104,7 +104,7 @@ const historyCarousel = tns({
 ---
 
 ### 4. 반응형 footer 슬라이드
-데스크탑 화면에서는 footer 의 quick 아이템들이 한 눈에 보이지만, 모바일에서는 슬라이드를 통해 보여지도록 해야했다. tiny-slider 에 반응형 옵션을 추가하여 슬라이드 기능은 모바일에서만 작동되도록 구현하였다.
+데스크탑 화면에서는 footer 의 quick 아이템들이 한 눈에 보이지만, 모바일에서는 슬라이드를 통해 보여지도록 해야했습니다. tiny-slider 에 반응형 옵션을 추가하여 슬라이드 기능은 모바일에서만 작동되도록 구현하였습니다.
 
 ![image](https://user-images.githubusercontent.com/83049523/169683814-7f4bcf6e-0710-42c8-8e1b-b4ce0c639aa6.png)
 
