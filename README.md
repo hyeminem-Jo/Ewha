@@ -35,6 +35,7 @@ window.addEventListener('scroll', _.throttle(fixBottomHeader, 50))
 ---
 
 ### 2. gnb 사이드바 탭 메뉴
+![image](https://user-images.githubusercontent.com/83049523/169683644-9a7b99fa-9947-4417-be84-f190cf0e0eba.png)
 PC 버전에서의 gnb 메뉴와 모바일 버전에서의 gnb 탭 메뉴 입니다. PC 버전에서는 하위 메뉴들이 한눈에 보이는 레이아웃으로 이루어져있지만, 모바일 버전에서는 구성범위가 작아 하위메뉴들이 사이드바 내에서 열었다 닫았다 하는 탭 메뉴 형식으로 구현하였습니다.
 
 ```
