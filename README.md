@@ -5,9 +5,9 @@
 ## 개요
 본 프로젝트는 반응형 웹으로 약간의 리뉴얼을 거쳤으며 본인 만의 방식으로 마크업 및 scss 를 작성하였습니다. 또한 여러 기능들을 순수 자바스크립트로 하드코딩하여 작업 해보았습니다.
 
-- 사용된 언어 및 플러그인
-  - html / scss / javascript
-  - tiny-slider
+### 사용된 언어 및 플러그인
+- html / scss / javascript
+- tiny-slider
 
 
 ## 주요 기능
