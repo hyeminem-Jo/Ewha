@@ -19,7 +19,7 @@
 
 ![image](https://user-images.githubusercontent.com/83049523/169683767-0747e731-f85c-4b39-8e87-043fa9cca257.png)
 
-```
+``` javascript
 const $bottomHeader = document.querySelector('.bottom-header')
 
 const GLOBAL_HEADER_HEIGHT = 250;
@@ -44,7 +44,7 @@ PC 버전에서의 gnb 메뉴와 모바일 버전에서의 gnb 탭 메뉴 입니
 
 ![image](https://user-images.githubusercontent.com/83049523/169683644-9a7b99fa-9947-4417-be84-f190cf0e0eba.png)
 
-```
+``` javascript
 const $sidebarNav = document.querySelector('.sidebar-nav')
 const $$sidebarNavItem = $sidebarNav.querySelectorAll('.nav-item')
 
@@ -91,7 +91,7 @@ $$drawerMenuBtn.forEach((item) => {
 
 ![image](https://user-images.githubusercontent.com/83049523/169683794-7f79ed6b-6d20-45c1-a5cb-0c8edd056d54.png)
 
-```
+``` javascript
 const historyCarousel = tns({
   container: '.history-carousel-slider .slider-list',
   mode: 'gallery',
@@ -110,7 +110,7 @@ const historyCarousel = tns({
 
 ![image](https://user-images.githubusercontent.com/83049523/169683814-7f4bcf6e-0710-42c8-8e1b-b4ce0c639aa6.png)
 
-```
+``` javascript
 const footerCarousel = tns({
   disable: false,
   container: '.footer-quick-carousel .slider-list',
