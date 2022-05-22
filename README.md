@@ -87,6 +87,8 @@ $$drawerMenuBtn.forEach((item) => {
 ### 3. 학교 소개 탭 슬라이드
 원본 사이트에는 없는 새롭게 제작한 부분으로, 학교에 대한 역사를 소개하는 section 입니다. 플러그인을 사용한 슬라이드이며 클릭 버튼으로 이미지를 눌러 그와 관련된 글이 슬라이드 되도록 제작해보았습니다. 
 
+![image](https://user-images.githubusercontent.com/83049523/169683794-7f79ed6b-6d20-45c1-a5cb-0c8edd056d54.png)
+
 ```
 const historyCarousel = tns({
   container: '.history-carousel-slider .slider-list',
@@ -103,6 +105,9 @@ const historyCarousel = tns({
 
 ### 4. 반응형 footer 슬라이드
 데스크탑 화면에서는 footer 의 quick 아이템들이 한 눈에 보이지만, 모바일에서는 슬라이드를 통해 보여지도록 해야했다. tiny-slider 에 반응형 옵션을 추가하여 슬라이드 기능은 모바일에서만 작동되도록 구현하였다.
+
+![image](https://user-images.githubusercontent.com/83049523/169683814-7f4bcf6e-0710-42c8-8e1b-b4ce0c639aa6.png)
+
 ```
 const footerCarousel = tns({
   disable: false,
